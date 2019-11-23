@@ -1,6 +1,6 @@
 .App {
     text-align: center;
-    margin: 0 auto;
+    margin: 50px auto;
     display: flex;
     max-width: 1200px;
     justify-content: space-between;
@@ -27,12 +27,19 @@
 
 .order {
     border: 1px solid #000;
+    border-radius: 20px;
     width: 350px;
     height: 600px;
 }
 
 .items {
-    border: 1px solid #000;
+    border: 1px solid dodgerblue;
+    border-radius: 20px;
     width: 700px;
     height: 600px;
+}
+.itemsBlock{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
