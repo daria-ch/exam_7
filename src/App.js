@@ -53,11 +53,10 @@ class App extends Component {
         return totalPrice;
     };
 
-
     totalPrice = () => {
         const total = this.state.total;
         if (total === 0) {
-            return 'Order is empty! Please add sme items'
+            return 'Order is empty! Please add some items'
         } else {
             return 'Total price: ' + total;
         }
@@ -67,6 +66,10 @@ class App extends Component {
         const textStyle = {
             fontSize: '20px',
             textTransform: 'uppercase'
+        };
+        const totalStyle = {
+            fontSize: '20px',
+            color: 'darkblue'
         };
 
         const orderProducts = this.state.products.map(product => {
@@ -100,7 +103,7 @@ class App extends Component {
                 <div className="order">
                     <p style={textStyle}>Order Details</p>
                     {orderProducts}
-                    <p>{this.totalPrice()}</p>
+                    <p style={totalStyle}>{this.totalPrice()}</p>
                 </div>
                 <div className='items'>
                     <p style={textStyle}>Add Items</p>
