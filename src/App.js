@@ -15,9 +15,38 @@ class App extends Component {
             {name: 'Cola', count: 0},
         ]
     };
+    total = 0;
+
+    addProduct = (name) => {
+        const products = [...this.state.products];
+        for (let item of products) {
+            if (item.name === name) {
+                item.count++;
+            }
+        }
+        this.setState({products});
+        this.price = 0 + this.addPrice();
+    };
+
+    removeProduct = (name) => {
+        const products = [...this.state.products];
+        for (let item of products) {
+            if (item.name === name && item.count > 0) {
+                item.count--;
+            }
+        }
+        this.setState({products});
+        this.price = 0 + this.addPrice();
+    };
 
 
-
+    addPrice = () => {
+        let totalPrice = 0;
+        for (let i = 0; i < this.state.products.length; i++) {
+            totalPrice += Products[i].price * this.state.products[i].count;
+        }
+        return totalPrice;
+    };
 
 
     render() {
@@ -32,6 +61,7 @@ class App extends Component {
                 image={item.image}
                 name={item.name}
                 price={item.price}
+                add={() => this.addProduct(item.name)}
             />
         });
 
