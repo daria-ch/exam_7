@@ -7,7 +7,7 @@ const OrderItem = props => {
         <div className='orderItem'>
            <span>{props.name}</span>
             <span>X {props.count}</span>
-            <span>{props.price}</span>
+            <span>{props.price} KGS</span>
             <img src={Delete} alt="#" onClick={props.remove}/>
         </div>
     );

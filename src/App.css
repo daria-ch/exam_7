@@ -26,10 +26,11 @@
 }
 
 .order {
-    border: 1px solid #000;
+    border: 1px solid dodgerblue;
     border-radius: 20px;
     width: 350px;
     height: 600px;
+    padding: 15px;
 }
 
 .items {
@@ -37,6 +38,7 @@
     border-radius: 20px;
     width: 700px;
     height: 600px;
+    padding: 15px;
 }
 .itemsBlock{
     display: flex;
